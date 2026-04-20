@@ -1,0 +1,21 @@
+function setup()
+  pin(9, output)
+end
+
+function run()
+  local v = 0
+
+  repeat 52 do
+    pwm(9, v)
+    wait(8)
+    v = v + 5
+  end
+
+  v = 255
+
+  repeat 52 do
+    pwm(9, v)
+    wait(8)
+    v = v - 5
+  end
+end

@@ -1,0 +1,25 @@
+function short_flash()
+  toggle(13)
+  wait(120)
+  toggle(13)
+  wait(120)
+end
+
+function long_flash()
+  toggle(13)
+  wait(600)
+  toggle(13)
+  wait(250)
+end
+
+function setup()
+  pin(13, output)
+end
+
+function run()
+  repeat 3 do
+    short_flash()
+  end
+  long_flash()
+  wait(800)
+end

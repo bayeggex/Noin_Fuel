@@ -1,0 +1,11 @@
+function setup()
+  pin(13, output)
+  serial(115200)
+  print("Serial monitor ready")
+end
+
+function run()
+  print("heartbeat")
+  toggle(13)
+  wait(250)
+end

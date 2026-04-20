@@ -1,0 +1,13 @@
+function setup()
+  pin(9, output)
+  serial(115200)
+end
+
+function run()
+  local raw = analog(0)
+  local pwm_value = map(raw, 0, 1023, 0, 255)
+
+  pwm(9, pwm_value)
+  print(pwm_value)
+  wait(20)
+end

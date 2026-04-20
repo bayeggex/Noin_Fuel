@@ -1,0 +1,10 @@
+function setup()
+  pin(13, output)
+  serial(115200)
+  print("Blink")
+end
+
+function run()
+  toggle(13)
+  wait(500)
+end

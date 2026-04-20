@@ -1,0 +1,21 @@
+function setup()
+  pin(9, output)
+  serial(115200)
+end
+
+function run()
+  local light = analog(0)
+
+  if light < 341 then
+    pwm(9, 40)
+    print("low")
+  elseif light < 682 then
+    pwm(9, 140)
+    print("medium")
+  else
+    pwm(9, 255)
+    print("high")
+  end
+
+  wait(50)
+end

@@ -1,0 +1,17 @@
+function setup()
+  pin(13, output)
+  pin(2, input)
+end
+
+function run()
+  local speed = 350
+
+  if read(2) == 1 then
+    speed = 120
+  else
+    speed = 350
+  end
+
+  toggle(13)
+  wait(speed)
+end
